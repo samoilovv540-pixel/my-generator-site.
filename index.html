@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда дизельных генераторов закрытого типа | ЭнергоПрокат</title>
+    <meta name="description" content="Надежная аренда дизельных генераторов от 30 до 1000 кВт. Шумозащитные кожухи, доставка, круглосуточная поддержка. Звоните: +77073788868">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            900: '#78350f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+        
+        .hero-pattern {
+            background-color: #111827;
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.9)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Навигация -->
+    <header class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i data-lucide="zap" class="h-8 w-8 text-brand-500"></i>
+                    <span class="font-bold text-2xl tracking-tight text-gray-900">Энерго<span class="text-brand-500">Прокат</span></span>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#advantages" class="text-gray-600 hover:text-brand-500 font-medium transition-colors">Преимущества</a>
+                    <a href="#catalog" class="text-gray-600 hover:text-brand-500 font-medium transition-colors">Каталог</a>
+                    <a href="#footer" class="text-gray-600 hover:text-brand-500 font-medium transition-colors">Контакты</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-4">
+                    <div class="text-right">
+                        <p class="text-xs text-gray-500 font-medium">Круглосуточная поддержка</p>
+                        <a href="tel:+77073788868" class="text-lg font-bold text-gray-900 hover:text-brand-500 transition-colors">+7 707 378 88 68</a>
+                    </div>
+                    <a href="tel:+77073788868" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i> Позвонить
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-xl">
+            <a href="#advantages" class="block text-lg font-medium">Преимущества</a>
+            <a href="#catalog" class="block text-lg font-medium">Каталог</a>
+            <a href="tel:+77073788868" class="block text-brand-500 font-bold text-xl">+7 707 378 88 68</a>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero-pattern min-h-[90vh] flex items-center pt-20 relative overflow-hidden text-white">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-6">
+                    Аренда дизельных генераторов <span class="text-brand-500">любой мощности</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8">
+                    Обеспечим бесперебойное питание вашего объекта. Станции закрытого типа от 30 кВт до 1000 кВт. Доставка и монтаж под ключ.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#catalog" class="bg-brand-500 hover:bg-brand-600 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg">Выбрать мощность</a>
+                    <a href="tel:+77073788868" class="bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-4 rounded-lg font-bold text-lg backdrop-blur-sm transition-all">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="advantages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Почему выбирают нас?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Надежное оборудование и профессиональный сервис 24/7.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="p-6 bg-gray-50 rounded-2xl">
+                <i data-lucide="shield-check" class="w-12 h-12 text-brand-500 mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Надежность</h3>
+                <p class="text-gray-600">Только проверенные бренды и регулярное ТО.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-2xl">
+                <i data-lucide="truck" class="w-12 h-12 text-brand-500 mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Доставка</h3>
+                <p class="text-gray-600">Собственный транспорт для быстрой доставки.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-2xl">
+                <i data-lucide="settings" class="w-12 h-12 text-brand-500 mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Сервис</h3>
+                <p class="text-gray-600">Монтаж и пусконаладка включены в работу.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-2xl">
+                <i data-lucide="clock" class="w-12 h-12 text-brand-500 mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">24/7</h3>
+                <p class="text-gray-600">Круглосуточная техническая поддержка.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог -->
+    <section id="catalog" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold">Наш парк генераторов</h2>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Карточка 30 кВт -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 card-hover transition-all">
+                <img src="https://placehold.co/600x400/252f3f/f59e0b?text=ДГУ+30+кВт" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-black mb-4">30 кВт</h3>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Шумозащитный кожух</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> 220В / 380В</li>
+                    </ul>
+                    <button onclick="openModal('30 кВт')" class="w-full bg-gray-900 text-white py-3 rounded-lg font-bold hover:bg-brand-500 transition-colors">Запросить цену</button>
+                </div>
+            </div>
+            <!-- Карточка 100 кВт -->
+            <div class="bg-white rounded-2xl overflow-hidden border-2 border-brand-500 card-hover shadow-lg transition-all relative">
+                <div class="absolute top-4 right-4 bg-brand-500 text-white px-3 py-1 rounded font-bold text-xs uppercase">Хит</div>
+                <img src="https://placehold.co/600x400/252f3f/f59e0b?text=ДГУ+100+кВт" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-black mb-4">100 кВт</h3>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Погодозащищенный кожух</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Промышленный класс</li>
+                    </ul>
+                    <button onclick="openModal('100 кВт')" class="w-full bg-brand-500 text-white py-3 rounded-lg font-bold hover:bg-brand-600 transition-colors">Арендовать</button>
+                </div>
+            </div>
+            <!-- Карточка 500 кВт -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 card-hover transition-all">
+                <img src="https://placehold.co/600x400/252f3f/f59e0b?text=ДГУ+500+кВт" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-black mb-4">500 кВт</h3>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Контейнерный тип</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Большая мощность</li>
+                    </ul>
+                    <button onclick="openModal('500 кВт')" class="w-full bg-gray-900 text-white py-3 rounded-lg font-bold hover:bg-brand-500 transition-colors">Запросить цену</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4 text-brand-500">ЭнергоПрокат</h3>
+                <p class="text-gray-400">Надежная аренда электростанций по всему региону.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Контакты</h4>
+                <a href="tel:+77073788868" class="text-xl font-bold block mb-2">+7 707 378 88 68</a>
+                <p class="text-gray-400">info@energoprokat.kz</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Режим работы</h4>
+                <p class="text-gray-400">Круглосуточно 24/7</p>
+                <p class="text-gray-400">Без выходных</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-gray-500 text-sm">
+            © 2026 ЭнергоПрокат. Все права защищены.
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-900">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-2">Оставить заявку</h3>
+            <p class="text-gray-500 mb-6">Выбранная мощность: <span id="selected-power" class="text-brand-500 font-bold"></span></p>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Заявка успешно отправлена! Мы свяжемся с вами.'); closeModal();">
+                <input type="text" placeholder="Ваше имя" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none" required>
+                <input type="tel" placeholder="Номер телефона" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-brand-500 outline-none" required>
+                <button type="submit" class="w-full bg-brand-500 text-white font-bold py-4 rounded-lg hover:bg-brand-600 transition-all shadow-lg shadow-brand-500/30">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // Modal functions
+        function openModal(power) {
+            document.getElementById('selected-power').innerText = power;
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('modal').classList.remove('flex');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-0');
+            } else {
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
